@@ -14,13 +14,8 @@ let yPosition = 0;
 function setup(){
     createCanvas(800, 600);
     background(255);
-    if (keyIsDown (DOWN_ARROW)){
-        fill (0);
-    }
-        else{
-        fill (255);
-        }
-}
+} // close setup
+
 // Creating the beginning of the draw function
 // and circle #1
 function draw(){
@@ -48,13 +43,13 @@ function draw(){
  // pushed the color of the square will change    
     if (keyIsDown (UP_ARROW)){
         fill (0);
-    }
+    } // close if statement
         else{
         fill (80, 199, 199);
-        }
+        } // close else statement
 // Creating a square
     square (xPosition, 450, 100);
 
  
 
-}
+} // close first function draw
