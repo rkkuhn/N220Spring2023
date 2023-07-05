@@ -22,7 +22,7 @@ function draw() {
       console.log(i++)
   }
 
-  // Kelly Kuhn
+// Kelly Kuhn
 // July 5th, 2023
 
 // Create an application that draws a circle where the mouse 
@@ -54,6 +54,10 @@ function setup() {
       circle(mouseX,mouseY,diameter);
   }
 }
+
+
+// Kelly Kuhn
+// July 5th, 2023
 
 // Create a canvas 800px x 600 px.
 
