@@ -17,7 +17,7 @@ function setup() {
   createCanvas(800,600);
   //assigning 0 as x coordinate for the circle
   circleX=0;
-  // Using red as fill lime greenish
+  // Using as fill lime greenish
   fill(124,252,0);
 }
 
@@ -31,6 +31,6 @@ function draw() {
   circle(circleX, height/2, radius*2);
   
   //adding 5 to the x value of circle and if it reaches width (800), wrapping
-  //around from 0. so that circle will appear on far left when it reaches far right
+  //around from 0. So that circle will appear on far left when it reaches far right
   circleX=(circleX+5)%width;
 }
