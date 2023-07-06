@@ -21,3 +21,6 @@ function draw() {
   // count in an infinite loop. 
       console.log(i++)
   }
+
+while (i < 2000);
+  i++
