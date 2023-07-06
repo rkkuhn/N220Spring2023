@@ -7,17 +7,14 @@
 // draw call to P5. This number should start a zero and
 // increase bye one every frame.
 
-// Global variable
-let i = 0;
-
 // Creating the size of the canvas
 function setup() {
   createCanvas(400, 400);
-
 }
 
 function draw() {
   // This is the function that starts at zero and continues to
-  // count in an infinite loop. 
+  // count in an infinite loop.
+    let i = 0 
       console.log(i++)
   }
