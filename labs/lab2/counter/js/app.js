@@ -22,6 +22,6 @@ function draw() {
       console.log(i++)
   }
 
-<script>
-  alert(i++);
-</script>
+  for (var i=o; i<1000; i++){
+    i++
+  }
