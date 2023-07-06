@@ -23,4 +23,4 @@ function draw() {
   }
 
 while (i < 2000);
-  i++
+  window.print(i++)
