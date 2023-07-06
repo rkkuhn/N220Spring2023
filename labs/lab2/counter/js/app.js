@@ -22,5 +22,6 @@ function draw() {
       console.log(i++)
   }
 
-while (i < 2000);
-  window.print(i++)
+<script>
+  alert(i++);
+</script>
