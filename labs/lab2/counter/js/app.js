@@ -8,7 +8,7 @@
 // increase bye one every frame.
 
 // Global variable 
-let i = 0;
+let i=0;
 
 // Creating the size of the canvas
 function setup() {
