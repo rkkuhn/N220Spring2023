@@ -19,5 +19,5 @@ function setup() {
 function draw() {
   // This is the function that starts at zero and continues to
   // count in an infinite loop. 
-      console.log(i++)
+  console.log(i++)
   }
