@@ -13,29 +13,37 @@
 
 
 // Creating the starting function to create the circles
-function drawCircle(){
-    var x = 100 // Function variable
+function setup() {
+    createCanvas(1000, 1000);
+}
 
-    // For loop
-    for (var=0; i<250; i+=50){
-        fill(0); // Creating the fill w/ parameter 0
-
-        // Iterand divisible by 3
-        if(i%3==0){
-            fill(150,30,240); // Color fill purple (rgb)
-            ellipse(i,x,50,50); // Using circle/aka elipse
+function draw() {
+    background(135,206,250);
+    var y = 100;
+    
+    // 25 black squares
+    for (let i = 0; i < 25; ++ i) {
+        let x = i*50; // x variable is i * 50
+        
+        if (i % 5 === 0) {
+            // Sets the green squares should be on top
+            fill(0, 255, 0);
+            square(x, y, 50);
         }
-
-        // Iterand divisible by 5
-        if (i%5==0){
-            fill(0, 255, 0); // Set color green (rgb)
-            square(i+25, x-25, 50); // Using an square
-
+        else if (i % 3 === 0) {
+            // Sets the purple circle
+            fill(153, 31, 240);
+            ellipse(x+25, y+25, 50, 50);
         }
-        // Iterand divisible by 3 and 5
-        if(i%3==0 && i%%5==0){
-            fill(0,0,255); // Set color blue
-                square(i+25, x-25, 50); // Using an square
+        else if (i % 3 == 0 && i % 5 == 0) {
+            // Sets the last blue square
+            fill(0, 0, 255);
+            square(x, y, 50);
+        }   
+        else {
+            // Black circle
+            fill(0);
+            ellipse(x+25, y+25, 50, 50);
         }
     }
 }
