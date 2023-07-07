@@ -18,13 +18,22 @@ function setup() {
 }
 
 function draw() {
+    // Background color is a light blue
     background(135,206,250);
     var y = 100;
     
     // 25 black squares
     for (let i = 0; i < 25; ++ i) {
         let x = i*50; // x variable is i * 50
-        
+        // Researched the === to get my code to run - I found it on StackOverflow
+        // Edited Jan 30, 2020 at 22:18
+        // Rabbid76's user avatar
+        // Rabbid76
+        // 201k2626 gold badges131131 silver badges172
+        // this checks whether its two operands are Equal and returns 
+        // a Boolean result
+
+
         if (i % 5 === 0) {
             // Sets the green squares should be on top
             fill(0, 255, 0);
