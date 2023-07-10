@@ -5,16 +5,26 @@
 Looping through that array, draw a rectangle for each of those colors to 
 the screen horizontally, like neapolitan ice cream. */
 
-function setup(){
-createCanvas(400, 300);
+// Step 3: Declare an array of colors
+const colors = ['rgb(242, 160, 161)', 'rgb(252, 230, 201)', 'rgb(182, 215, 168)'];
+
+function setup() {
+  // Step 4: Set up the canvas
+  createCanvas(400, 200);
 }
 
-function draw(){
-    background (81, 66, 245);
-    line(0, 50, 400, 300);
+function draw() {
+  background(220);
 
-    rectMode(CENTER);
+  // Step 5: Draw the rectangles
+  const rectWidth = width / colors.length;
+  const rectHeight = height;
 
-    rect(200, 150, 150, 150);
+  for (let i = 0; i < colors.length; i++) {
+    const x = i * rectWidth;
+    const y = 0;
 
+    fill(colors[i]);
+    rect(x, y, rectWidth, rectHeight);
+  }
 }
