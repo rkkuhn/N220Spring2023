@@ -1,22 +1,29 @@
-
+let locs = [ 10, 20, 40, 10 ];
 
 function setup() {
-    //using 400x400 canvas size
-    createCanvas(400, 400);
-    //draw method will be executed only once.
-    noLoop();
-  }
-  
-  function draw() {
-    //using some gray-ish background
-    background(220);
-    //taking width as initial diameter
-    var diameter=width;
-    //looping as long as diameter is 10 or above
-    while(diameter>=10){
-      //drawing a circle centered at center of the window, with above diameter
-      circle(width/2, height/2, diameter);
-      //subtracting 10 from diameter.
-      diameter-=10;
-    }
-  }
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(10,10,10, 10);
+
+      if(frameCount % 60 == 0) {
+fill(255,0,0);
+circle(0, locs[0], 30)
+      }
+
+      if(frameCount % 20 == 0) {
+        fill(255,0,0);
+        circle(40, locs[1], 30)
+      }
+
+      if(frameCount % 40 == 0) {
+        fill(255,0,0);
+        circle(80, locs[2], 30)
+      }
+
+      if(frameCount % 80 == 0) {
+        fill(255,0,0);
+        circle(120, locs[3], 30)
+      }
+}
