@@ -1,48 +1,31 @@
-<script>
-    // Array to store bricks
-    let bricks = [];
+let circles = [];
 
-    function setup() {
-      createCanvas(400, 400);
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  // Check if it's time to create a new circle
+  if (frameCount % 10 === 0) {
+    let newCircle = {
+      x : width / 2,
+      y : 0
     }
-
-    function draw() {
-      background(220);
-
-      // Draw all the bricks
-      for (let i = 0; i < bricks.length; i++) {
-        bricks[i].update();
-        bricks[i].show();
-      }
-    }
-
-    function mouseClicked() {
-      // Create a new brick at the mouse position
-      let brick = new Brick(mouseX, mouseY);
-      bricks.push(brick);
-    }
-
-    // Brick class
-    class Brick {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.speed = 5;
-      }
-
-      // Update the brick's position
-      update() {
-        this.y += this.speed;
-      }
-
-      // Display the brick
-      show() {
-        fill(255, 0, 0);
-        rect(this.x, this.y, 50, 25);
-      }
-    }
+    circles.push(newCircle);
+  }
+  
+  // Update and display all circles
+  for (let i = 0; i < circles.length; i++) {
+    let circle = circles[i];
     
-    // Create a P5.js sketch
-    new p5();
-  </script>
+    // Move the circle down
+    circle.y += 5;
+    
+    // Display the circle
+    fill(0);
+    ellipse(circle.x, circle.y, 20);
+  }
+}
 
