@@ -5,21 +5,24 @@
 Looping through that array, draw a rectangle for each of those colors to 
 the screen horizontally, like neapolitan ice cream. */
 
-// Step 3: Declare an array of colors
+// Create an array of colors
 const colors = ['rgb(242, 160, 161)', 'rgb(252, 230, 201)', 'rgb(182, 215, 168)'];
 
-function setup() {
-  // Step 4: Set up the canvas
+// Create the canvas size
+function setup(){
   createCanvas(400, 200);
 }
 
-function draw() {
+// Start the draw function and set the background color
+function draw(){
   background(220);
 
-  // Step 5: Draw the rectangles
+  // Draw the rectangle
   const rectWidth = width / colors.length;
   const rectHeight = height;
 
+  // Create a for loop for the rectangle to add the different colors
+  // to create the neapolitan ice appearance.
   for (let i = 0; i < colors.length; i++) {
     const x = i * rectWidth;
     const y = 0;
