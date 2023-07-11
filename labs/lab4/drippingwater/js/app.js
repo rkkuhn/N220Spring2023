@@ -12,17 +12,17 @@ minimum, the Y location of each circle. */
 let circles = [];
 
 // Function to create canvas siz
-function setup() {
+function setup(){
   createCanvas(400, 400);
 }
 
 // Staring draw function and creating a whit background
-function draw() {
+function draw(){
   background(220);
   
   // If statement checking if it's time to create a new circle
-  if (frameCount % 10 === 0) {
-    let newCircle = {
+  if (frameCount % 10 === 0){
+    let newCircle ={
       x : width / 2,
       y : 0
     }
@@ -30,7 +30,7 @@ function draw() {
   }
   
   // For statement to update and display all circles
-  for (let i = 0; i < circles.length; i++) {
+  for (let i = 0; i < circles.length; i++){
     let circle = circles[i];
     
     // Command to move the circle down by 5
