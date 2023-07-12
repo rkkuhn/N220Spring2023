@@ -18,16 +18,16 @@ function draw(){
   background(220);
 
   // Draw the rectangle
-  const rectWidth = width / colors.length;
-  const rectHeight = height;
+  const rectangleWidth = width / colors.length;
+  const rectangleHeight = height;
 
   // Create a for loop for the rectangle to add the different colors
   // to create the neapolitan ice appearance.
-  for (let i = 0; i < colors.length; i++) {
-    const x = i * rectWidth;
+  for (let i = 0; i < colors.length; i++){
+    const x = i * rectangleWidth;
     const y = 0;
 
     fill(colors[i]);
-    rect(x, y, rectWidth, rectHeight);
+    rect(x, y, rectangleWidth, rectangleHeight);
   }
 }
