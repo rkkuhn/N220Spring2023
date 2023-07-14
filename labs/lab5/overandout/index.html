@@ -1,30 +1,49 @@
+<!--Author: Kelly Kuhn
+    Date: 7-13-2023
+  
+Requirements: Peak Pixels - Write the markup and 
+JavaScript to place a square div on the page 
+(100px x 100px), with a blue background.
+ Using onmouseover and onmouseout (instead of 
+ "onclick"), change the div's color to black when 
+ the mouse is over the div, and back to blue when 
+ the mouse leaves.
+-->
+
+
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+  </head>
 
-    </head>
-
-    <body>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-        <script src = "js/app.js"></script>
-
-        <div id="myDiv" style="width: 100px; height: 100px; background-color: blue;"></div>
-        </div>
-
-        <script>
-            var div = document.getElementById("myDiv");
-            div.onmouseover = function() {
-              div.style.backgroundColor = "black";
-            };
-            div.onmouseout = function() {
-              div.style.backgroundColor = "blue";
-            };
-          </script>
+  <body>
+    <!-- Create the div id for the width and height of 100 px background color blue-->
+    <div id="myDiv" 
+      style="width: 100px; height: 100px; 
+      background-color: blue;">
+    </div>
 
 
-    </body>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src = "js/app.js"></script>
+
+    <!-- Create teh script-->
+    <script>
+      // The code below has us obtain the myDiv and when the mouse
+      // is inside the square the color changes to black
+      var div = document.getElementById("myDiv");
+        div.onmouseover = function() {
+        div.style.backgroundColor = "black";
+        };
+        // when the mouse is outside the square the color is blue
+        div.onmouseout = function() {
+        div.style.backgroundColor = "blue";
+        };
+    </script>
+
+  </body>
 </html>
