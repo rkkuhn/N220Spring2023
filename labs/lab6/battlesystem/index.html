@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRPG Battle System</title>
+    <style>
+      /* Add some basic styling for the stats container */
+      #stats-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stats-container">
+      <div id="player-stats">
+        <h2>Player</h2>
+        <p id="player-attack">Attack: </p>
+        <p id="player-hp">HP: </p>
+        <p id="player-defense">Defense: </p>
+      </div>
+      <div id="enemy-stats">
+        <h2>Enemy</h2>
+        <p id="enemy-attack">Attack: </p>
+        <p id="enemy-hp">HP: </p>
+        <p id="enemy-defense">Defense: </p>
+      </div>
+    </div>
+    <button onclick="attack()">Attack</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h2>Virtual Pet</h2>
+        <p>Name: <span id="name"></span></p>
+        <p>Energy: <span id="energy"></span></p>
+        <p>Happiness: <span id="happiness"></span></p>
+        <button onclick="feed()">Feed</button>
+        <button onclick="play()">Play</button>
+    
+        <script>
+          let pet ={
+            name: "Charlie The Yellow Lab Puppy",
+            energy: 50,
+            happiness: 50,
+            age: 1
+          };
+    
+          function setup(){
+            updateStats();
+          }
+    
+          function feed(){
+            pet.energy += 5;
+            updateStats();
+          }
+    
+          function play(){
+            pet.happiness += 5;
+            updateStats();
+          }
+    
+          function updateStats(){
+            document.getElementById("name").textContent = pet.name;
+            document.getElementById("energy").textContent = pet.energy;
+            document.getElementById("happiness").textContent = pet.happiness;
+          }
+        </script>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src = "js/app.js"></script>
+        
+    </body>
+</html>
