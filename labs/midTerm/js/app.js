@@ -206,7 +206,7 @@ function displayScore(){
     textAlign(RIGHT, TOP);
     text("Score: " + score, width - 20, 20);
   }
-// Respawning aliens using initializeAliens function
+// Respawn aliens using initializeAliens function
   function initializeAliens(){
     const rows = 3;
     const cols = 10;
