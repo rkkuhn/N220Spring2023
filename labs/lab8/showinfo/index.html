@@ -1,0 +1,37 @@
+<!-- Author: Kelly Kuhn
+     Date: July 27, 2023
+
+     Create an application with an array of strings, at 
+     least three. Create three buttons that are 
+     associated with those strings. (For instance, 
+     you might have 'home', 'about', and 'art'), and a 
+     div to display those strings. Using a single 
+     function, make it so that when a button is clicked, 
+     the div displays the string associated with it in 
+     that array. ("home" button shows index 0, "about" 
+     shows index 1, so on..).
+    
+    Standard HTML document setup.-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Show Info</title>
+    </head>
+
+    <body>
+
+        <h1>Button Array App</h1>
+        <button onclick="showContent(0)">Home</button>
+        <button onclick="showContent(1)">About</button>
+        <button onclick="showContent(2)">Art</button>
+        <div id="contentDiv"></div>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src = "js/app.js"></script>
+        
+    </body>
+</html>
