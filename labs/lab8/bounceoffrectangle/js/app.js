@@ -68,19 +68,11 @@ function draw(){
 function collideRect(circleX, circleY, rectX, rectY, rectW, rectH){
     // Start the loop
     var colliding = false;
-        // Create two if statements
-        // One for if the circle hits the rectangle
-        // One for if the circle doesn't hit the circle
         if(circleX + circle_radius > rectX && circleX + circle_radius  < rectX + rectW){
-
             if(circleY + circle_radius  > rectY && circleY + circle_radius  < rectY + rectH){
-
         return true;
-
-            }
-
+            }           
         }
-
     return false;
 
 }

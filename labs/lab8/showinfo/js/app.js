@@ -15,11 +15,7 @@
 // Array of strings
 let contentArray = ['Home content goes here.', 'About content goes here.', 'Art content goes here.'];
 
-function setup() {
-  // P5.js setup function (no need to implement anything here for this application)
-}
-
-function showContent(index) {
+function showContent(index){
   // Get the div element
   let contentDiv = document.getElementById('contentDiv');
 
