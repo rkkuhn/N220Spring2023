@@ -6,7 +6,7 @@ Recreate the above exercise, but using the array.filter
 and array.includes methods. */
 
 
-function badWordCatch() {
+function badWordCatch(){
 
     var wordInput = document.getElementById("wordInput").value;
     wordInput = wordInput.toLowerCase();
@@ -16,7 +16,7 @@ function badWordCatch() {
     // bad words to look for, keep this array in lowercase
     var badWords = ["clear", "water", "tires"];
     
-    // .toLowerCase will do the case insensitive match!
+    // .toLowerCase will do the case match!
     var foundBadWords = arr.filter(el => badWords.includes(el));
     
     document.getElementById("wordsFound").innerHTML = foundBadWords.join(", ");

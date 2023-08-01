@@ -26,7 +26,6 @@ function createDiv(obj){
     div.style.height = obj.height;
     div.style.background=obj.color;
     document.body.appendChild(div);
-  
   }
   
   function myFunction(){
@@ -38,5 +37,4 @@ function createDiv(obj){
   
   for(i=0;i<objects.length;i++)
       createDiv(objects[i]);
-  
   }
