@@ -1,0 +1,40 @@
+<!-- Author: Kelly Kuhn
+     Date: Aug 4, 2023
+
+An application with 3 buttons that ask questions. 
+For instance, they might ask "What is the capital 
+of Indiana?". Each button should have a data-answer 
+attribute that lists the answer.
+
+When a button is clicked, display the answer to the 
+button's question in a div. Use only one function, 
+and that function must make use of the button's 
+data-attribute.
+    
+    Standard HTML document setup.-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Flash Cards</title>
+    </head>
+
+    <body>
+        <!-- Header tag question -->
+        <h2>What is the capital of Indiana?</h2>
+        
+        <!-- Button codes below -->
+        <button id="Albany" onclick="myFunction(this.id)">Albany</button>
+        <button id="Indianapolis" onclick="myFunction(this.id)">Indianapolis</button>
+        <button id="Austin" onclick="myFunction(this.id)">Austin</button>
+        <button id="Sacramento" onclick="myFunction(this.id)">Sacramento</button>
+
+        
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src = "js/app.js"></script>
+        
+    </body>
+</html>

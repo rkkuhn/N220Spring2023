@@ -1,0 +1,112 @@
+<!-- Author: Kelly Kuhn
+     Date: Aug 4, 2023
+
+    Color Changer
+
+This is an application that will start a div at a 
+black color, and as a user presses buttons 
+associated with RGB, the div will change to new 
+colors. The button presses should affect additively 
+- that is. If a div is currently blue, pressing 
++red buttons will change the div to a purple color.
+
+9 buttons (associated with red green and blue). 
+There should be a +1, +5, and +10 button for each 
+color.
+
+1 div that will change colors to the rgb color 
+calculated
+
+1 div that shows the current calculated rgb color
+
+You must use attributes on the buttons for the 
+values to change the colors by.
+
+    Standard HTML document setup.-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>Color Mixer</title>
+
+        <style>
+            #buttons{
+                width: 300px;
+                margin: 10px 15%;
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+            }
+
+            button{
+                margin: 10px;
+                width: 50px;
+                height: 25px;
+            }
+
+            #currentColor{
+                height: 40px;
+                width: 70%;
+                margin: 20px auto;
+                border: 1px solid #ddd;
+                text-align: center;line-height: 2px;
+            }
+
+            #colorBox{
+                height: 200px;
+                width: 70%;
+                margin: 20px auto;
+                background-color: rgb(0,0,0);
+            }
+        </style> 
+
+    </head>
+
+    <body>
+
+
+        <!-- div for change color -->
+        <div id="colorBox"></div>
+        <!-- div to show current current calculated rgb color -->
+        <div id="currentColor">
+        <h2>Current Color:rgb(<span id="rgbValue"></span>)</h2>
+        </div>
+            <!-- div for buttons -->
+            <div id="buttons">
+
+            <!-- Using a table structure I learned in Into to HTML -->
+            <table>
+                <tr>
+                    <!-- Setting up the onclick for red -->
+                    <td>Red:</td>
+                        <td><button onclick="red1()">+1</button></td>
+                        <td><button onclick="red5()">+5</button></td>
+                        <td><button onclick="red10()">+10</button></td>
+                </tr>
+
+                <tr>
+                    <!-- Setting up the onclick for green -->
+                    <td>Green:</td>
+                        <td><button onclick="green1()">+1</button></td>
+                        <td><button onclick="green5()">+5</button></td>
+                        <td><button onclick="green10()">+10</button></td>
+                </tr>
+
+                <tr>
+                    <!-- Setting up the onclick for blue -->
+                    <td>Blue:</td>
+                        <td><button onclick="blue1()">+1</button></td>
+                        <td><button onclick="blue5()">+5</button></td>
+                        <td><button onclick="blue10()">+10</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+        <script src = "js/app.js"></script>
+        
+    </body>
+</html>
