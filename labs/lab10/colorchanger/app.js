@@ -16,7 +16,18 @@ elements to store the color to be changed to.
 */
 
 
-function fun(this){
-    var element = document.getElementById(this.id);
-    element.style.backgroundColor = element.dataset.color;
-}
+const squares = document.querySelectorAll('.square');
+
+//   Create a color-changing function.
+  function changeColor(event) {
+
+    // Get the "data-color" attribute's colour value.
+    const color = event.target.getAttribute('data-color');
+
+   // Modify the clicked element's background colour
+    event.target.style.backgroundColor = color;
+  }
+
+  squares.forEach(sq => {
+    sq.addEventListener('click', changeColor);
+  });

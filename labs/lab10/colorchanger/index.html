@@ -24,12 +24,13 @@ elements to store the color to be changed to.
         <title>Color Changer</title>
 
         <style>
-            div{
+             .square {
                 width: 200px;
                 height: 200px;
                 background-color: grey;
                 float: left;
                 margin: 5px;
+                cursor: pointer;
             }
         </style>
 
@@ -37,16 +38,28 @@ elements to store the color to be changed to.
 
     <body>
 
-        <div id="one" data-color="red" onclick="fun(this)"></div>
-        <div id="two" data-color="green" onclick="fun(this)"></div>
-        <div id="three" data-color="blue" onclick="fun(this)"></div>
+        <!--  Filter for all items with the class "square" -->
+        <div class="square" data-color="red"></div>
+        <div class="square" data-color="green"></div>
+        <div class="square" data-color="blue"></div>
 
         <script>
-            function fun(e){
-                var ele = document.getElementById(e.id);
-                ele.style.backgroundColor = ele.dataset.color;
+            const squares = document.querySelectorAll('.square');
+          
+            //   Create a color-changing function.
+            function changeColor(event) {
+          
+                // Get the "data-color" attribute's colour value.
+                const color = event.target.getAttribute('data-color');
+          
+                // Modify the clicked element's background colour
+                event.target.style.backgroundColor = color;
             }
-        </script>
+          
+            squares.forEach(sq => {
+                sq.addEventListener('click', changeColor);
+            });
+          </script>
     
 
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>

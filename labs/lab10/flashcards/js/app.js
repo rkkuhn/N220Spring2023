@@ -16,9 +16,12 @@ data-attribute.
 function myFunction(clicked){
     // if statement for correct answer
     if (clicked=="Indianapolis")
+
     // requesting div answer when correct
     document.getElementById("answer").innerHTML = "It is the correct answer, good job!"+clicked; 
+
     else
+
     // requesting div answer when incorrect
     document.getElementById("answer").innerHTML = "You have the incorrect answer. Correct answer is Indianapolis";
     }
