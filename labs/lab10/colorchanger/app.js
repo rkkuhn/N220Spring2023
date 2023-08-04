@@ -15,6 +15,7 @@ elements to store the color to be changed to.
 
 */
 
+
 function fun(this){
     var element = document.getElementById(this.id);
     element.style.backgroundColor = element.dataset.color;

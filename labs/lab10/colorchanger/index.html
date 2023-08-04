@@ -41,6 +41,14 @@ elements to store the color to be changed to.
         <div id="two" data-color="green" onclick="fun(this)"></div>
         <div id="three" data-color="blue" onclick="fun(this)"></div>
 
+        <script>
+            function fun(e){
+                var ele = document.getElementById(e.id);
+                ele.style.backgroundColor = ele.dataset.color;
+            }
+        </script>
+    
+
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
         <script src = "js/app.js"></script>
         
