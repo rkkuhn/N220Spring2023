@@ -6,42 +6,34 @@
    to the algorithm paper. -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe Final Project N220</title>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="styles.css">
 
-    <!-- Linking my stylesheet from .css to .HTML -->
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-    
-    <!-- Div created for gameBoard this is where we will create the
-         elements for the board -->
-    <div  class="board" id="board">
-        <div class = "cell x" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        <div class = "cell" data-cell></div>
-        </div>
-    </div>
+     <title>Document</title>
+   </head>
+   <body>
+     <div class="board" id="board">
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+       <div class="cell" data-cell></div>
+     </div>
+     <div class="winning-message" id="winningMessage">
+       <div data-winning-message-text></div>
+       <button id="restartButton">Restart</button>
 
-    <div class = "winning-message" id = "winning Message">
-        <div data-winning-message-text></div>
-        <button id = "restartButton"> Restart </button>
+       <script src="app.js" defer></script>
 
-
-
-    <!-- defer ensures the app.js is not loaded until after all the HTML has
-         run. -->
-         <script src = "app.js"></script>
-
-</body>
-</html>
+     </div>
+   </body>
+   </html>
