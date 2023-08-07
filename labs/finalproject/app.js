@@ -84,7 +84,36 @@ function checkScore() {
     ]
 
     // Statements checking for winning combos (either x or o's)
+    
     winningCombos.forEach(array => {
-        array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'))
+        const circleWins = array.every(cell => 
+            allSquares[cell].firstChild?.classList.contains('circle'))
+
+        if (circleWins) {
+            infoDisplay.textContent = " Winner is Circle!"
+            // We need to remove the even listener but the only way to do it here
+            // is with the replaceWith command
+            allSquares.forEach(square => square.replaceWith(square.cloneNode (true)))
+            // if any winningCombos are true for circle we need to return
+            // (aka exit out)
+            return
+        }
     })
+
+    winningCombos.forEach(array => {
+        const crossWins = array.every(cell => 
+            allSquares[cell].firstChild?.classList.contains('cross'))
+
+        if (crossWins) {
+            infoDisplay.textContent = " Winner is Cross!"
+            // We need to remove the even listener but the only way to do it here
+            // is with the replaceWith command
+            allSquares.forEach(square => square.replaceWith(square.cloneNode (true)))
+            // if any winningCombos are true for circle we need to return
+            // (aka exit out)
+            return
+        }
+    })
+ 
+
 }
