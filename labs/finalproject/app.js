@@ -1,5 +1,5 @@
 // Author: Kelly Kuhn
-// Date: Aug 6, 2023
+// Date: Aug 6, 2023, 7, 2023
 
 /* Final Project: Creating a simple game of Tic-Tac-To from different area
    of research. I used YouTube, and the web. The documentation will be added
@@ -16,6 +16,11 @@ const infoDisplay = document.querySelector("#info")
 const startCells = [
     " ", " ", " ", " ", " ", " ", " ", " ", " " 
 ]
+
+// Decide who goes first
+let go = "circle"
+infoDisplay.textContent = "Circle makes the first move!"
+
 
 // Create a function that will create the game board using startCells
 // This function will create the game board of 3 x 3
@@ -50,6 +55,36 @@ function addGo(e) {
     const goDisplay = document.createElement('div')
     // adding classList to goDisplay and then calling 'circle' for testing
     // purposes only to ensure code is working. It will be removed.
-    goDisplay.classList.add('circle')
+    // After testing removed "circle and cross" added the element "go" that
+    // defined above (line 21).
+    goDisplay.classList.add(go)
     e.target.append(goDisplay)
+    // If go is true to "circle" then "cross" is next; otherwise it is "circles"
+    // turn. This statement over rides line 21. Changes the statement on who's
+    // turn it is to play.
+    go = go === "circle" ? "cross" : "circle"
+    infoDisplay.textContent = "It is now " + go + "'s turn to go."
+    // Remove the event listener
+    e.target.removeEventListener("click", addGo)
+    checkScore()
+}
+
+// Function to check for a winner or keep playing the game
+function checkScore() {
+    // Check every square for a winner
+    const allSquares = document.querySelectorAll(".square")
+    // Check to see if there is a winner
+    const winningCombos = [
+        // Rows
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        // Columns
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        // Diagonal
+        [0, 4, 8], [2, 4, 6]
+    ]
+
+    // Statements checking for winning combos (either x or o's)
+    winningCombos.forEach(array => {
+        array.every(cell => allSquares[cell].firstChild?.classList.contains('circle'))
+    })
 }
