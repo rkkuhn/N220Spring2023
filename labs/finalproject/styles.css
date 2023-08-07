@@ -6,83 +6,68 @@
    to the algorithm paper.
 */
 
+:root {
+    --cell-size: 100px;
+    /* create the size of the x and o's */
+    --mark-size: cal(var(--cell-size) * .9);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 
 /* Start creating the elements for the body of the playing board */
 body {
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+
+/* Create a cell var for width and height */
+:root {
+    --cell-size: 100px;
+    /* Create the size of our x and o's inside the cell */
+    --mark-size: cal(var(--cell-size) * .9);
+}
+
+/* Using #.board set the width and height, set display, justify content, 
+align content . */
+.board {
+    width: 100vw;
     height: 100vh;
-}
-
-/* Using #game_Board set the width and height, use the background-color black
-b/c all my squares will be white, create flex and flex wrap which is a
-container which expands items to fill available space or shrinks them to
-prevent overflow. */
-#gameboard {
-    width: 300px;
-    height: 300px;
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 1px black;
-}
-
-/* Creating the contents for the square boxes */
-.square {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border: solid 2px black;
-    /* Center items inside the box */
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-content: center;
+    justify-items: center;
     align-items: center;
-    /* Cox color on the inside */
-    box-sizing: border-box;
+    grid-template-columns: repeat(3, auto);
 }
 
-/* Create a class circle */
-.circle {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    border: 15px solid blue;
-    /* circle color on the inside */
-    box-sizing: border-box;
-
+/* Working with the individual 9 cells creating boards */
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
 }
 
-/* Create a class called x */
-.cross {
-    height: 90px;
-    width: 90px;
-    position: relative;
-    transform: rotate(45deg);
-
+/* Remove the top outside boarder */
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
 }
 
-/* Establish the plus sign to an x */
-.cross:before, .cross::after {
-    content: " ";
-    position: absolute;
-    background-color: red;
-
+/* Remove the border on the left outside boarder */
+.cell:nth-child(3n + 1) {
+    border-left: none;
 }
 
-.cross:before {
-    left: 50%;
-    width: 30%;
-    margin-left:  -15%;
-    height: 100%;
+/* Remove the border on the right outside boarder */
+.cell:nth-child(3n + 3) {
+    border-right: none;
 }
 
-.cross:after {
-    top: 50%;
-    height: 30%;
-    margin-top:  -15%;
-    width: 100%;
+/* Remove the bottom outside boarder */
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
 }

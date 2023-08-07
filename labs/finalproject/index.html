@@ -20,12 +20,28 @@
     
     <!-- Div created for gameBoard this is where we will create the
          elements for the board -->
-    <div id="gameboard"></div>
+    <div  class="board" id="board">
+        <div class = "cell x" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        <div class = "cell" data-cell></div>
+        </div>
+    </div>
 
-    <p id="info"></p>
+    <div class = "winning-message" id = "winning Message">
+        <div data-winning-message-text></div>
+        <button id = "restartButton"> Restart </button>
 
 
-    <script src = "app.js"></script>
+
+    <!-- defer ensures the app.js is not loaded until after all the HTML has
+         run. -->
+         <script src = "app.js"></script>
 
 </body>
 </html>
