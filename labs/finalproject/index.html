@@ -14,6 +14,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        <!-- This is the link that adds all the styles to the board, x's and 
+              0's to the .css file -->
         <link rel="stylesheet" href="style.css">
 
         <title>Tic-Tac-Toe</title>
@@ -21,24 +23,36 @@
 
 
     <body>
+    
+        <h1>Tic-Tac-Toe</h1>
+        
+        <!-- creating a class and id below-->
         <div class="board" id="board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+        
+            <!-- Creating a div called class and using data-cell to make
+                 it easier to use in JavaScript (JS). We need to create 0-8
+                 to make it 9 total squares -->
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>  
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
         </div>
 
-
+        <!-- Div class pointing to the winning message pop up.
+             All the id's below are to call it out in the JS -->
         <div class="winning-message" id="winningMessage">
+            <!-- This is the message that tells the user who the winner is or
+                 if it is a draw (no winner) -->
             <div data-winning-message-text></div>
             <button id="restartButton">Restart</button>
 
-        <script src="app.js" defer></script>
+        <!-- Directing HTML where to find the JavaScript files-->    
+        <script src="app.js"> defer</script>
 
         </div>
 
